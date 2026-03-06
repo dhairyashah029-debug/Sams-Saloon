@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sam's Saloon</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0b0b0b;
+color:white;
+}
+
+/* NAVBAR */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:black;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+header h1{
+color:#f5c518;
+}
+
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:white;
+font-size:15px;
+}
+
+nav a:hover{
+color:#f5c518;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1");
+background-size:cover;
+background-position:center;
+}
+
+.hero h2{
+font-size:48px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+color:#ddd;
+margin-bottom:20px;
+}
+
+.hero button{
+padding:15px 35px;
+background:#f5c518;
+border:none;
+font-size:16px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.hero button:hover{
+background:#e6b800;
+}
+
+/* SECTIONS */
+
+section{
+padding:70px 10%;
+text-align:center;
+}
+
+section h2{
+color:#f5c518;
+margin-bottom:40px;
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.card{
+background:#151515;
+padding:30px;
+border-radius:10px;
+border:1px solid #f5c518;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+}
+
+/* PRICING */
+
+.pricing{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.price-card{
+background:#151515;
+padding:30px;
+border-radius:10px;
+border:1px solid #f5c518;
+}
+
+/* BOOKING FORM */
+
+#booking{
+background:#151515;
+}
+
+form{
+max-width:400px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+form input, form select{
+padding:12px;
+border:none;
+border-radius:6px;
+}
+
+form button{
+padding:14px;
+background:#f5c518;
+border:none;
+font-weight:bold;
+cursor:pointer;
+}
+
+form button:hover{
+background:#e6b800;
+}
+
+/* CONTACT */
+
+.contact p{
+margin:8px 0;
+color:#ccc;
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+text-align:center;
+padding:30px;
+margin-top:40px;
+}
+
+/* FLOATING WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+font-size:26px;
+padding:14px 18px;
+border-radius:50%;
+text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Sam's Saloon</h1>
+
+<nav>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#pricing">Pricing</a>
+<a href="#booking">Book</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h2>Premium Grooming Experience</h2>
+<p>Haircuts • Beard Styling • Luxury Care</p>
+
+<button onclick="document.getElementById('booking').scrollIntoView()">Book Appointment</button>
+
+</section>
+
+
+<section id="services">
+
+<h2>Our Services</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Hair Cut</h3>
+<p>Professional styling and modern cuts.</p>
+</div>
+
+<div class="card">
+<h3>Beard Trim</h3>
+<p>Perfect beard shaping and grooming.</p>
+</div>
+
+<div class="card">
+<h3>Hair Spa</h3>
+<p>Relaxing treatment for healthy hair.</p>
+</div>
+
+<div class="card">
+<h3>Facial Grooming</h3>
+<p>Deep cleaning and glowing skin care.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="gallery">
+
+<h2>Gallery</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438">
+<img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9">
+<img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f">
+<img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1">
+
+</div>
+
+</section>
+
+
+<section id="pricing">
+
+<h2>Pricing</h2>
+
+<div class="pricing">
+
+<div class="price-card">
+<h3>Hair Cut</h3>
+<p>₹200</p>
+</div>
+
+<div class="price-card">
+<h3>Hair + Beard</h3>
+<p>₹350</p>
+</div>
+
+<div class="price-card">
+<h3>Hair Spa</h3>
+<p>₹600</p>
+</div>
+
+<div class="price-card">
+<h3>Premium Package</h3>
+<p>₹999</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="booking">
+
+<h2>Book Appointment</h2>
+
+<form id="bookingForm">
+
+<input type="text" id="name" placeholder="Your Name" required>
+
+<input type="tel" id="phone" placeholder="Phone Number" required>
+
+<select id="service" required>
+<option value="">Select Service</option>
+<option>Hair Cut</option>
+<option>Hair + Beard</option>
+<option>Hair Spa</option>
+<option>Premium Package</option>
+</select>
+
+<input type="date" id="date" required>
+
+<input type="time" id="time" required>
+
+<button type="submit">Book on WhatsApp</button>
+
+</form>
+
+</section>
+
+
+<section id="contact" class="contact">
+
+<h2>Contact Us</h2>
+
+<p>📍 Mira Bhayandar, Mumbai</p>
+<p>📞 +91 XXXXX XXXXX</p>
+<p>⏰ Open 9 AM – 10 PM</p>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Sam's Saloon | Premium Grooming</p>
+
+</footer>
+
+
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">💬</a>
+
+
+<script>
+
+document.getElementById("bookingForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let service=document.getElementById("service").value;
+let date=document.getElementById("date").value;
+let time=document.getElementById("time").value;
+
+let message="New Appointment Booking%0A%0A"+
+"Name: "+name+"%0A"+
+"Phone: "+phone+"%0A"+
+"Service: "+service+"%0A"+
+"Date: "+date+"%0A"+
+"Time: "+time;
+
+let whatsappNumber="91XXXXXXXXXX";
+
+let url="https://wa.me/"+whatsappNumber+"?text="+message;
+
+window.open(url,"_blank");
+
+});
+
+</script>
+
+</body>
+</html>
